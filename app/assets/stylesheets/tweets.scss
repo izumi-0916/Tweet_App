@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height:100%;
+  width: 100%;
+  position: relative;
+}
+
+.header{
+  height: 80px;
+  width: 100%;
+  background-color: #ff8c00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name{
+  font-size: 20px;
+  color: white;
+}
+
+.header-title{
+  font-size: 30px;
+  color: white;
+  margin-left: 10vh;
+}
+
+.main-content{
+  height: calc(100vh - 160px);
+  width: 100%;
+  background-color: wheat;
+  overflow: scroll;
+  position: relative;
+}
+
+.tweet{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid white;
+}
+
+.name-box{
+  height: 40px;
+}
+
+.name-box-name{
+  font-size: 20px;
+  padding-left: 10px;
+  float: left;
+  line-height: 40px;
+}
+
+.name-box-date{
+  font-size: 15px;
+  padding-left: 20px;
+  color: #a9a9a9;
+  float: left;
+  line-height: 40px;
+}
+        
+.tweet-text{
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+
+.item-box-icon{
+  padding-left: 10px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.comment{
+  
+}
+
+.heart{
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.icon-box{
+  height: 80px;
+  width: 80px;
+  background-color: aqua;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 90px;
+  right: 10px;
+  text-align: center;
+}
+
+.feather-icon{
+  color: white;
+  display: inline;
+  line-height: 100px;
+}
+  
+.footer{
+  height: 80px;
+  width: 100%;
+  background-color: #ffff33; 
+} 
+ 
+.footer-icons{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 15%;
+}
+
+.search{
+  cursor: pointer;
+}
+

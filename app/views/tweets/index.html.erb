@@ -1,0 +1,25 @@
+<div class="main-content">
+  <% @tweets.each do |tweet| %>
+    <div class="tweet">
+      <div class="name-box">
+        <div class="name-box-name"><%= tweet.name %></div>
+        <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+      </div>
+      <div class="tweet-text">
+        <div class="image" style="background-image: url(<%= tweet.image %>);"></div>
+        <div class="text"> <%= simple_format(tweet.text) %></div>
+      </div>
+      <div class="item-box">
+        <div class="item-box-icon">
+          <a class="comment" href="#"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
+          <div class="heart">
+            <i class="far fa-heart fa-lg" style="color:black;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class="icon-box">
+    <a class="feather-icon" href="#"><i class="fas fa-feather-alt fa-3x"></i></a>
+  </div>
+</div>

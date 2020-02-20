@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TweetApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="header-title">Tweet_App</div>
+        <div class="header-name">izumi</div>
+      </div>
+    </div>
+    <%= yield %>
+
+    <div class="footer">
+      <div class="footer-icons">
+        <a href="#"><i class="fas fa-home fa-3x" style="color:black;"></i></a>
+        <div class="search">
+          <i class="fas fa-search fa-3x" style="color:black;"></i>
+        </div>
+        <a href="#"><i class="fas fa-user-cog fa-3x" style="color:black;"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
