@@ -30,7 +30,10 @@
       </div>
     </div>
   <% end %>
-  <div class="icon-box">
-    <a class="feather-icon" href="/tweets/new"><i class="fas fa-feather-alt fa-3x"></i></a>
-  </div>
+  <% if user_signed_in? %>
+    <div class="icon-box">
+      <a class="feather-icon" href="/tweets/new"><i class="fas fa-feather-alt fa-3x"></i></a>
+    </div>
+  <% else %>
+  <% end %>
 </div>
