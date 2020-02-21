@@ -1,0 +1,14 @@
+<div class="main-content">
+  <%= form_with(model: @tweet, local: true) do |form| %>
+    <div class="form">
+      <div class="form-header">
+        <%= form.submit "ツイートする", class: "form-btn" %>
+      </div>
+      <div class="form-box">
+        <%= form.text_field :image, placeholder: "写真のUrl",class: "form-image" %>
+        <%= form.text_area :text, placeholder: "コメント" , rows: "10", class: "form-text" %>
+      </div>
+    </div>
+      <%= form.text_field :name, placeholder: "名前" %>
+  <% end %>
+</div>

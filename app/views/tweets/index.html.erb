@@ -4,9 +4,19 @@
       <div class="name-box">
         <div class="name-box-name"><%= tweet.name %></div>
         <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+        <div class="more">
+          <span><i class="fas fa-ellipsis-h"></i></span>
+          <ul class="more-list">
+            <li>
+              <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+            </li>
+        </div>
       </div>
       <div class="tweet-text">
-        <div class="image" style="background-image: url(<%= tweet.image %>);"></div>
+        <div class="image"><%= tweet.image %>></div>
         <div class="text"> <%= simple_format(tweet.text) %></div>
       </div>
       <div class="item-box">
@@ -20,6 +30,6 @@
     </div>
   <% end %>
   <div class="icon-box">
-    <a class="feather-icon" href="#"><i class="fas fa-feather-alt fa-3x"></i></a>
+    <a class="feather-icon" href="/tweets/new"><i class="fas fa-feather-alt fa-3x"></i></a>
   </div>
 </div>

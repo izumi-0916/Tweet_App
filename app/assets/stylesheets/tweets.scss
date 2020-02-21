@@ -41,6 +41,7 @@
   margin: 0 auto;
   margin-top: 20px;
   border: 1px solid white;
+  border-radius: 10px;
 }
 
 .name-box{
@@ -60,6 +61,17 @@
   color: #a9a9a9;
   float: left;
   line-height: 40px;
+}
+
+.more{
+  float: right;
+  width: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.more-list{
+  font-size: 13px;
 }
         
 .tweet-text{
@@ -91,6 +103,7 @@
   bottom: 90px;
   right: 10px;
   text-align: center;
+  cursor: pointer;
 }
 
 .feather-icon{
