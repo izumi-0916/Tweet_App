@@ -23,7 +23,7 @@
         </div>
         <% if user_signed_in? %>
           <div class="log">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'post' %>
           </div>
         <% else %>
           <div class="log">

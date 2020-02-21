@@ -1,17 +1,21 @@
 <div class="main-content">
   <div class="tweet">
     <div class="name-box">
-      <div class="name-box-name"><%= @tweet.user.nickname %></div>
+      <a class="name-box-name" href="/users/<%= @tweet.user.id %>">
+          <%= @tweet.user.nickname %>
+      </a>
       <div class="name-box-date"><%= @tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
       <div class="more">
         <span><i class="fas fa-ellipsis-h"></i></span>
-        <ul class="more-list">
-          <li>
-            <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get, class: "link" %>
-          </li>
-          <li>
-            <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, class: "link" %>
-          </li>
+        <% if user_signed_in? && current_user.id == @tweet.user_id %>
+          <ul class="more-list">
+            <li>
+              <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get, class: "link" %>
+            </li>
+            <li>
+              <%= link_to '削除', "/tweets/#{@tweet.id}", method: :delete, class: "link" %>
+            </li>
+        <% end %>
       </div>
     </div>
     <div class="tweet-text">
