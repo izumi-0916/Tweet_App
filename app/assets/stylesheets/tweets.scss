@@ -73,7 +73,14 @@
 .more-list{
   font-size: 13px;
 }
-        
+
+.link{
+  color: #222222;
+  border: 1px solid black;
+  padding: 3px;
+  border-radius: 5px;
+}
+   
 .tweet-text{
   padding-bottom: 10px;
   margin-left: 10px;
@@ -86,7 +93,15 @@
 }
 
 .comment{
-  
+  position: relative;
+}
+
+.comment-new{
+  position: absolute;
+  left: 115px;
+  margin-top: 3px;
+  font-size: 10px;
+  opacity: 0;
 }
 
 .heart{
@@ -128,3 +143,6 @@
   cursor: pointer;
 }
 
+li{
+  margin-top: 5px;
+}
