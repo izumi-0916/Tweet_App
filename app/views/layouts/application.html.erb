@@ -36,9 +36,9 @@
     <%= yield %>
     
     <div class="footer">
+      <div class="footer-icons">
+        <a href="/"><i class="fas fa-home fa-3x" style="color:black;"></i></a>
       <% if user_signed_in? %>
-        <div class="footer-icons">
-          <a href="/"><i class="fas fa-home fa-3x" style="color:black;"></i></a>
           <div class="search">
             <i class="fas fa-search fa-3x" style="color:black;"></i>
           </div>
