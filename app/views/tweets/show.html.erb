@@ -1,7 +1,7 @@
 <div class="main-content">
   <div class="tweet">
     <div class="name-box">
-      <div class="name-box-name"><%= @tweet.name %></div>
+      <div class="name-box-name"><%= @tweet.user.nickname %></div>
       <div class="name-box-date"><%= @tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
       <div class="more">
         <span><i class="fas fa-ellipsis-h"></i></span>
