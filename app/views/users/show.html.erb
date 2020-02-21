@@ -1,10 +1,10 @@
 <div class="main-content">
+  <p class="name-title"><%= @nickname %>さんの投稿一覧</p>
+
   <% @tweets.each do |tweet| %>
     <div class="tweet">
       <div class="name-box">
-        <a class="name-box-name" href="/users/<%= tweet.user.id %>">
-          <%= tweet.user.nickname %>
-        </a>
+        <div class="name-box-name"><%= tweet.user.nickname %></div>
         <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
         <div class="more">
           <span><i class="fas fa-ellipsis-h"></i></span>
@@ -23,21 +23,10 @@
       </div>
       <div class="item-box">
         <div class="item-box-icon">
-          <div class="comment">
-            <i class="far fa-comment fa-lg" style="color:black;"></i>
-          </div>
+          <div class="comment"><i class="far fa-comment fa-lg" style="color:black;"></i></div>
             <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get, class: "comment-new" %>
-          <div class="heart">
-            <i class="far fa-heart fa-lg" style="color:black;"></i>
-          </div>
         </div>
       </div>
     </div>
-  <% end %>
-  <% if user_signed_in? %>
-    <div class="icon-box">
-      <a class="feather-icon" href="/tweets/new"><i class="fas fa-feather-alt fa-3x"></i></a>
-    </div>
-  <% else %>
   <% end %>
 </div>

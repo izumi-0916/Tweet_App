@@ -14,7 +14,10 @@
   <body>
     <div class="wrapper">
       <div class="header">
-        <div class="header-name">izumi</div>
+        <% if user_signed_in? %>
+          <div class="header-name"><%= current_user.nickname %></div>
+        <% else %>
+        <% end %>
         <div>
           <a class="header-title" href="/">Tweet_App</a>
         </div>
@@ -31,15 +34,18 @@
       </div>
     </div>
     <%= yield %>
-
+    
     <div class="footer">
-      <div class="footer-icons">
-        <a href="/"><i class="fas fa-home fa-3x" style="color:black;"></i></a>
-        <div class="search">
-          <i class="fas fa-search fa-3x" style="color:black;"></i>
+      <% if user_signed_in? %>
+        <div class="footer-icons">
+          <a href="/"><i class="fas fa-home fa-3x" style="color:black;"></i></a>
+          <div class="search">
+            <i class="fas fa-search fa-3x" style="color:black;"></i>
+          </div>
+          <a href="/users/<%= current_user.id %>"><i class="fas fa-user-cog fa-3x" style="color:black;"></i></a>
         </div>
-        <a href="#"><i class="fas fa-user-cog fa-3x" style="color:black;"></i></a>
-      </div>
+      <% else %>
+      <% end %>
     </div>
   </body>
 </html>
