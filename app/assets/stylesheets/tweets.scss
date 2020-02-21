@@ -26,11 +26,28 @@
 .header-title{
   font-size: 30px;
   color: white;
-  margin-left: 80px;
+  margin-left: 130px;
+  padding: 5px;
+}
+
+.header-title:hover{
+  box-shadow: 0 10px 15px -5px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+.logs{
+  display: flex;
+  margin: 10vh;
 }
 
 .log{
-  margin-right: 10vh;
+  margin-right: 10px;
+}
+
+.log:hover{
+  transform: translateY(-3px);
+  transition: 0.3s;
 }
 
 .post{
@@ -135,6 +152,12 @@
   cursor: pointer;
 }
 
+.icon-box:hover{
+  box-shadow: 0 10px 15px -5px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
 .feather-icon{
   color: white;
   display: inline;
@@ -155,6 +178,11 @@
 
 .search{
   cursor: pointer;
+  color: #ff8c00;
+}
+
+.search:hover{
+  color: red;
 }
 
 li{
@@ -164,4 +192,20 @@ li{
 .name-title{
   text-align: center;
   margin: 20px 0;
+}
+
+.home{
+  color: #ff8c00;
+}
+
+.home:hover{
+  color: red;
+}
+
+.cog{
+  color: #ff8c00;
+}
+
+.cog:hover{
+  color: red;
 }

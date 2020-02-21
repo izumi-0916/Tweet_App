@@ -1,0 +1,27 @@
+.comment-content{
+  width: 100%;
+  position: relative;
+}
+
+.comment-box {
+  border: 1px solid black;
+  width: 70%;
+  height: 50vh;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.comment-text{
+  width: 100%;
+}
+
+.comment-btn{
+  width: 100%;
+  background-color: #ff8c00;
+  color: wheat;
+}
+.comments {
+  margin-left: 10px;
+}
