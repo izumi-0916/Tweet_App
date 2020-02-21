@@ -6,8 +6,8 @@
       </a>
       <div class="name-box-date"><%= @tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
       <div class="more">
-        <span><i class="fas fa-ellipsis-h"></i></span>
         <% if user_signed_in? && current_user.id == @tweet.user_id %>
+        <span><i class="fas fa-ellipsis-h"></i></span>
           <ul class="more-list">
             <li>
               <%= link_to '編集', "/tweets/#{@tweet.id}/edit", method: :get, class: "link" %>
