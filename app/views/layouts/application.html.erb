@@ -44,14 +44,13 @@
     <div class="footer">
       <div class="footer-icons">
         <a href="/" class="home"><i class="fas fa-home fa-3x"></i></a>
-      <% if user_signed_in? %>
-          <div class="search">
-            <i class="fas fa-search fa-3x"></i>
-          </div>
+        <a href="/searches" class="search">
+          <i class="fas fa-search fa-3x"></i>
+        </a>
+        <% if user_signed_in? %>
           <a href="/users/<%= current_user.id %>" class="cog"><i class="fas fa-user-cog fa-3x" ></i></a>
-        </div>
-      <% else %>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </body>
 </html>

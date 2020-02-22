@@ -1,0 +1,23 @@
+.search-form{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-input{
+  height: 40px;
+  width: 70%;
+  padding-left: 20px;
+}
+
+.search-btn{
+  width: 100px;
+  background-color: #00ecff;
+  color: white;
+  height: 40px;
+  cursor: pointer;
+}
+
+.search-btn:hover{
+  box-shadow:0 10px 15px -5px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
+  transition: 0.3s;
+}

@@ -1,0 +1,39 @@
+<div class="main-content">
+  <%= form_with(url: search_searches_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+  <% @tweets.each do |tweet| %>
+    <div class="tweet">
+      <div class="name-box">
+        <a class="name-box-name" href="/users/<%= tweet.user.id %>">
+          <%= tweet.user.nickname %>
+        </a>
+        <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+      </div>
+      <div class="tweet-text">
+        <div class="image"><%= tweet.image %>></div>
+        <div class="text"> <%= simple_format(tweet.text) %></div>
+      </div>
+      <div class="item-box">
+        <div class="item-box-icon">
+          <% if user_signed_in? %>
+            <div class="comment">
+              <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
+            </div>
+            <div class="heart">
+              <i class="far fa-heart fa-lg" style="color:black;"></i>
+            </div>
+          <% else %>
+            <div class="comment">
+              <i class="far fa-comment fa-lg" style="color:black;"></i>
+            </div>
+            <div class="heart">
+              <i class="far fa-heart fa-lg" style="color:black;"></i>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
