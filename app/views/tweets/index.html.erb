@@ -15,9 +15,8 @@
         <div class="item-box-icon">
           <% if user_signed_in? %>
             <div class="comment">
-              <i class="far fa-comment fa-lg" style="color:black;"></i>
+              <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
             </div>
-              <%= link_to '詳細', "/tweets/#{tweet.id}", method: :get, class: "comment-new" %>
             <div class="heart">
               <i class="far fa-heart fa-lg" style="color:black;"></i>
             </div>

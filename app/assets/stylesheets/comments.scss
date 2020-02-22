@@ -21,6 +21,13 @@
   width: 100%;
   background-color: #ff8c00;
   color: wheat;
+  cursor: pointer;
+}
+
+.comment-btn:hover{
+  box-shadow: 0 10px 15px -5px rgba(0,0,0,.15),0 0 5px rgba(0,0,0,.1);
+  transform: translateY(-3px);
+  transition: 0.3s;
 }
 .comments {
   margin-left: 10px;
