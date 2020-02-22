@@ -5,7 +5,7 @@ class SearchesController < ApplicationController
   end
 
   def search
-    @tweets = Tweet.search(params[:keyword])
+    @tweets = Tweet.search(params[:keyword]).order("created_at DESC")
   end
 
 end
