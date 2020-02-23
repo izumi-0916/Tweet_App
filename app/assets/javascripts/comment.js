@@ -28,7 +28,7 @@ $(function(){
       $('.comment-btn').prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert('送信エラー');
     })
   })
 });
