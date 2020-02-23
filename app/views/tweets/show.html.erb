@@ -16,7 +16,7 @@
   <div class="comment-content">
     <div class="comment-box">
       <% if current_user %>
-        <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+        <%= form_with(model: [@tweet, @comment], local: true, id: "new-comment") do |form| %>
           <%= form.text_area :text, placeholder: "コメントする", rows: "2", class: "comment-text" %>
           <%= form.submit "送信",class: "comment-btn" %>
         <% end %>
