@@ -13,15 +13,10 @@
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
 
-      <% if devise_mapping.rememberable? %>
-        <div class="field-text">
-          <%= f.label :このメールアドレスを記憶します %><br />
-          <%= f.check_box :remember_me %>
-        </div>
-      <% end -%>
+      
 
       <div class="actions">
-        <%= f.submit "ログイン" %>
+        <%= f.submit "ログイン", class: "log-btn" %>
       </div>
     <% end %>
   </div>
