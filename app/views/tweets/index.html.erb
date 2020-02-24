@@ -8,7 +8,11 @@
         <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
       </div>
       <div class="tweet-text">
-        <div class="image"><%= tweet.image %>></div>
+        <div class="image">
+          <% if tweet.image? %>
+            <%= image_tag tweet.image.url, :size =>'410x300' %>
+          <% end %>
+        </div>
         <div class="text"> <%= simple_format(tweet.text) %></div>
       </div>
       <div class="item-box">

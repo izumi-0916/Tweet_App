@@ -5,8 +5,11 @@
         <%= form.submit "編集する", class: "form-btn" %>
       </div>
       <div class="form-box">
-        <%= form.text_field :image, placeholder: "写真のUrl",class: "form-image" %>
         <%= form.text_area :text, placeholder: "コメント" , rows: "10", class: "form-text" %>
+        <label class="image-file">
+          <i class="fas fa-image fa-4x"></i>
+          <%= form.file_field :image, class: "file" %>
+        </label>
       </div>
     </div>
   <% end %>
