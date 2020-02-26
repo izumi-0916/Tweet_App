@@ -21,21 +21,9 @@
       </div>
       <div class="item-box">
         <div class="item-box-icon">
-          <% if user_signed_in? %>
             <div class="comment">
               <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
             </div>
-            <div class="heart">
-              <i class="far fa-heart fa-lg" style="color:black;"></i>
-            </div>
-          <% else %>
-            <div class="comment">
-              <i class="far fa-comment fa-lg" style="color:black;"></i>
-            </div>
-            <div class="heart">
-              <i class="far fa-heart fa-lg" style="color:black;"></i>
-            </div>
-          <% end %>
         </div>
       </div>
     </div>
