@@ -4,7 +4,7 @@
       <a class="name-box-name" href="/users/<%= @tweet.user.id %>">
           <%= @tweet.user.nickname %>
       </a>
-      <div class="name-box-date"><%= @tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+      <div class="name-box-date"><%= @tweet.created_at.strftime("%Y年%m月%d日 %H:%M")%></div>
       <div class="more">
       </div>
     </div>
@@ -25,7 +25,7 @@
           <%= form.submit "送信",class: "comment-btn" %>
         <% end %>
       <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <strong><p class="comment-if">※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       <% end %>
 
       <div class="comments">

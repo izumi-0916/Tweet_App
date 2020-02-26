@@ -5,7 +5,7 @@
         <a class="name-box-name" href="/users/<%= tweet.user.id %>">
           <%= tweet.user.nickname %>
         </a>
-        <div class="name-box-date"><%= tweet.created_at.strftime("%Y-%m-%d %H:%M")%></div>
+        <div class="name-box-date"><%= tweet.created_at.strftime("%Y年%m月%d日 %H:%M")%></div>
       </div>
       <div class="tweet-text">
         <div class="image">
@@ -17,21 +17,9 @@
       </div>
       <div class="item-box">
         <div class="item-box-icon">
-          <% if user_signed_in? %>
             <div class="comment">
               <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
             </div>
-            <%# <div class="heart">
-              <i class="far fa-heart fa-lg"></i>
-            </div> %>
-          <% else %>
-            <div class="comment">
-              <i class="far fa-comment fa-lg" style="color:black;"></i>
-            </div>
-            <div class="heart">
-              <i class="far fa-heart fa-lg" style="color:black;"></i>
-            </div>
-          <% end %>
         </div>
       </div>
     </div>
