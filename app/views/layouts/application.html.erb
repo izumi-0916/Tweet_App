@@ -17,6 +17,7 @@
         <% if user_signed_in? %>
           <div class="header-name"><%= current_user.nickname %></div>
         <% else %>
+          <div class="header-null"></div>
         <% end %>
         <div>
           <a class="header-title" href="/">Tweet_App</a>

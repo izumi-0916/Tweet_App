@@ -23,10 +23,13 @@
   margin-left: 10vh;
 }
 
+.header-null{
+  margin-right: 200px;
+}
+
 .header-title{
   font-size: 30px;
   color: white;
-  margin-left: 130px;
   padding: 5px;
 }
 
@@ -36,7 +39,7 @@
 
 .logs{
   display: flex;
-  margin: 10vh;
+  margin: 20px;
 }
 
 .log:hover{
