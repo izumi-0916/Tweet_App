@@ -97,16 +97,27 @@
   width: 50px;
   text-align: right;
   margin-right: 15px;
+}
+
+.more-icon{
   cursor: pointer;
+  margin-bottom: -10px;
+  font-size: 25px;
 }
 
 .link{
-  font-size: 15px;
+  font-size: 18px;
   color: #222222;
   border: 1px solid black;
   padding: 0 3px;
   border-radius: 5px;
   display: none;
+  margin-right: -5px;
+}
+
+.link:hover{
+  color: #666666;
+  border: 1px solid #666666;
 }
 
 .more:hover .link{
