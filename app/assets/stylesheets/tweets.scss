@@ -97,18 +97,16 @@
   width: 50px;
   text-align: right;
   margin-right: 15px;
-  margin-top: 5px;
   cursor: pointer;
 }
 
 .link{
-  font-size: 20px;
+  font-size: 15px;
   color: #222222;
   border: 1px solid black;
-  padding: 3px;
+  padding: 0 3px;
   border-radius: 5px;
   display: none;
-  margin-top: 10px;
 }
 
 .more:hover .link{
