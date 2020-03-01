@@ -31,6 +31,7 @@
           <div class="comment">
             <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
           </div>
+          <%= tweet.comments.size %>
           <% if user_signed_in? %>
             <div class="heart">
               <% if tweet.likes.find_by(user_id:current_user.id) %>
@@ -44,6 +45,7 @@
                 <div class="iine"><%= button_to 'いいね', "/tweets/#{tweet.id}/likes"  %></div>
                 </label>
               <% end %>
+              <%= tweet.likes.size %>
             </div>
           <% end %>
         </div>
