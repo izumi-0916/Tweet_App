@@ -25,22 +25,9 @@
             <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
           </div>
           <%= tweet.comments.size %>
-          <% if user_signed_in? %>
-            <div class="heart">
-              <% if tweet.likes.find_by(user_id:current_user.id) %>
-                <label class="like">
-                <i class="fas fa-heart fa-lg"></i>
-                <div class="iine"><%= button_to 'いいねを取り消す', "/tweets/#{tweet.id}/likes/id" , method: :delete %></div>
-                </label>
-              <% else %>
-                <label class="unlike">
-                <i class="far fa-heart fa-lg"></i>
-                <div class="iine"><%= button_to 'いいね', "/tweets/#{tweet.id}/likes"  %></div>
-                </label>
-              <% end %>
-              <%= tweet.likes.size %>
-            </div>
-          <% end %>
+          <div id="like-btn">
+            <%= render partial: 'likes/like', locals: { tweet: tweet, likes: @likes} %>
+          </div>
         </div>
       </div>
     </div>
