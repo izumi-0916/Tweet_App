@@ -20,7 +20,7 @@
           <div class="header-null"></div>
         <% end %>
         <div>
-          <a class="header-title" href="/">Tweets</a>
+          <%= link_to "Tweets", root_path, class: 'header-title' %>
         </div>
         <% if user_signed_in? %>
           <div class="logs">
@@ -44,12 +44,16 @@
     
     <div class="footer">
       <div class="footer-icons">
-        <a href="/" class="home"><i class="fas fa-home fa-3x"></i></a>
-        <a href="/searches" class="search">
+        <%= link_to root_path, class: 'home' do %>
+          <i class="fas fa-home fa-3x"></i>
+        <% end %>
+        <%= link_to searches_path, class: 'search' do %>
           <i class="fas fa-search fa-3x"></i>
-        </a>
+        <% end %>
         <% if user_signed_in? %>
-          <a href="/users/<%= current_user.id %>" class="cog"><i class="fas fa-user-cog fa-3x" ></i></a>
+          <%= link_to user_path(current_user.id), class: 'cog' do %>
+            <i class="fas fa-user-cog fa-3x" ></i>
+          <% end %>
         <% end %>
       </div>
     </div>

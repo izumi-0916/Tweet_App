@@ -6,9 +6,9 @@
   <% @tweets.each do |tweet| %>
     <div class="tweet">
       <div class="name-box">
-        <a class="name-box-name" href="/users/<%= tweet.user.id %>">
+        <%= link_to user_path(tweet.user.id), class: 'name-box-name' do %>
           <%= tweet.user.nickname %>
-        </a>
+        <% end %>
         <div class="name-box-date"><%= tweet.created_at.strftime("%Y年%m月%d日 %H:%M")%></div>
       </div>
       <div class="tweet-text">
@@ -22,7 +22,9 @@
       <div class="item-box">
         <div class="item-box-icon">
           <div class="comment">
-            <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
+            <%= link_to tweet_path(tweet.id),class: 'i-comment' do %>
+              <i class="far fa-comment fa-lg" style="color:black;"></i>
+            <% end %>
           </div>
           <%= tweet.comments.size %>
           <div id="like-btn">
@@ -30,6 +32,13 @@
           </div>
         </div>
       </div>
+    </div>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="icon-box">
+      <%= link_to new_tweet_path,class: 'feather-icon' do %>
+        <i class="fas fa-feather-alt fa-3x"></i>
+      <% end %>
     </div>
   <% end %>
 </div>

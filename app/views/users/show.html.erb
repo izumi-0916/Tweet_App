@@ -10,10 +10,10 @@
             <ul class="more-list">
               <div class="more-icon"><i class="fas fa-ellipsis-h "></i></div>
               <li>
-                <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get, class: "link" %>
+                <%= link_to '編集',  edit_tweet_path(tweet.id), method: :get, class: "link" %>
               </li>
               <li>
-                <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete, class: "link" %>
+                <%= link_to '削除', tweet_path(tweet.id), method: :delete, class: "link" %>
               </li>
             </ul>
           <% end %>
@@ -30,7 +30,9 @@
       <div class="item-box">
         <div class="item-box-icon">
           <div class="comment">
-            <a href="/tweets/<%=tweet.id%>"><i class="far fa-comment fa-lg" style="color:black;"></i></a>
+            <%= link_to tweet_path(tweet.id),class: 'i-comment' do %>
+              <i class="far fa-comment fa-lg" style="color:black;"></i>
+            <% end %>
           </div>
           <%= tweet.comments.size %>
           <div id="like-btn">
@@ -38,6 +40,13 @@
           </div>
         </div>
       </div>
+    </div>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="icon-box">
+      <%= link_to new_tweet_path,class: 'feather-icon' do %>
+        <i class="fas fa-feather-alt fa-3x"></i>
+      <% end %>
     </div>
   <% end %>
 </div>
